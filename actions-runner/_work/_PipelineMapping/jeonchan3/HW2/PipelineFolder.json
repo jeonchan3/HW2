@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "jeonchan3/HW2",
+  "pipelineDirectory": "HW2",
+  "workspaceDirectory": "HW2\\HW2",
+  "repositories": {
+    "jeonchan3/HW2": {
+      "repositoryPath": "HW2\\HW2",
+      "lastRunOn": "04/08/2026 22:34:22 +09:00"
+    }
+  },
+  "lastRunOn": "04/08/2026 22:39:30 +09:00"
+}
