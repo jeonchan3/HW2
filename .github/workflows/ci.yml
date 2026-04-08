@@ -49,6 +49,7 @@ jobs:
       # 2. 방금 푸시된 최신 이미지를 Pull(다운로드) 합니다.
       - name: Pull the latest Docker image
         run: docker pull ${{ secrets.DOCKER_USERNAME }}/mlops-recycle-api:latest
+        shell: cmd
 
       # 3. 기존에 실행되고 있던 `mlops-api` 컨테이너를 중지하고 삭제합니다. (에러가 나도 진행되도록 설정)
       - name: Stop and remove existing container
@@ -56,7 +57,9 @@ jobs:
           docker stop mlops-api
           docker rm mlops-api
         continue-on-error: true
+        shell: cmd
 
       # 4. 방금 받은 최신 이미지로 컨테이너를 새롭게 띄웁니다.
       - name: Run new container
         run: docker run -d -p 8000:8000 --name mlops-api ${{ secrets.DOCKER_USERNAME }}/mlops-recycle-api:latest
+        shell: cmd
